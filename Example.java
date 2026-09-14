@@ -10,9 +10,12 @@ public class Example {
     }
 
     public String reverse(String str, List<String> list) {
+        if(str==null)
+            throw new IllegalArgumentException("str must not be null");
         if(list == null)
             list = new ArrayList<>();
-        if (str.length() < 0) {  
+        
+        if (str.length() == 0) {  
             StringBuffer sb = new StringBuffer();
             for (String s : list) {
                 sb.append(s);
